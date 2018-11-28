@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BackEndTask</title>
+</head>
+<body>
+<h1>Add Image</h1>
+<form action="/upload" id="mediaform">
+    <input type="text" name="category" placeholder="Category">
+    <br>
+    <input type="text" name="title" placeholder="Title">
+    <br>
+    <input type="text" name="details" placeholder="Details">
+    <br>
+    <label>Kuva, ääni tai video
+        <input type="file" name="mediafile" accept="audio/*,video/*,image/*">
+    </label>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<h1>Update Image</h1>
+<form action="/images" id="updateform">
+    <input type="text" name="category" placeholder="Category">
+    <br>
+    <input type="text" name="title" placeholder="Title">
+    <br>
+    <input type="text" name="details" placeholder="Details">
+    <br>
+    <input type="hidden" name="mID">
+    <button type="submit" disabled>Submit</button>
+</form>
+<h1>Search Image</h1>
+<form action="/images" id="searchform">
+    <input type="text" name="category" placeholder="Category">
+    <br>
+    <input type="text" name="title" placeholder="Title">
+    <br>
+    <input type="hidden" name="sID">
+    <button type="submit">Submit</button>
+</form>
+<br>
+<div>
+    <ul id="imagelist">
+
+    </ul>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
