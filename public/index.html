@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>BackEndTask</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div id="body">
+    <div>
 <h1>Add Image</h1>
 <form action="/upload" id="mediaform">
     <input type="text" name="category" placeholder="Category">
@@ -19,6 +22,8 @@
     <br>
     <button type="submit">Submit</button>
 </form>
+    </div>
+    <div>
 <h1>Update Image</h1>
 <form action="/images" id="updateform">
     <input type="text" name="category" placeholder="Category">
@@ -30,16 +35,18 @@
     <input type="hidden" name="mID">
     <button type="submit" disabled>Submit</button>
 </form>
+    </div>
+    <div>
 <h1>Search Image</h1>
 <form action="/images" id="searchform">
     <input type="text" name="category" placeholder="Category">
     <br>
-    <input type="text" name="title" placeholder="Title">
-    <br>
-    <input type="hidden" name="sID">
     <button type="submit">Submit</button>
 </form>
+    </div>
+</div>
 <br>
+<hr>
 <div>
     <ul id="imagelist">
 

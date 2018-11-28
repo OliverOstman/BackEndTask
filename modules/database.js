@@ -43,7 +43,7 @@ const insert = (data, connection, callback) => {
 const search = (data, connection, callback) => {
   // simple query
   connection.query(
-      'SELECT * FROM bc_media WHERE category = ? AND title = ?;',
+      'SELECT * FROM bc_media WHERE category = ?;',
       data,
       (err, results, fields) => {
         // console.log(results); // results contains rows returned by server

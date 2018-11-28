@@ -1,0 +1,16 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+}
+
+#body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
