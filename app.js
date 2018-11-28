@@ -123,11 +123,13 @@ app.search('/images', (req, res) => {
 
 //app.listen(8000);
 //app.listen(3000);
+/*
 http.createServer((req, res) => {
   const redir = 'https://' + req.headers.host;
   // + '/node' + req.url;
   console.log(redir);
   res.writeHead(301, { 'Location': redir });
   res.end();
-}).listen(8000);
+}).listen(8000); */
+https.createServer(options, app).listen(8000);
 https.createServer(options, app).listen(3000);
