@@ -3,7 +3,6 @@
 const frm = document.querySelector('#mediaform');
 const updatefrm = document.querySelector('#updateform');
 const list = document.querySelector('#imagelist');
-const search = document.querySelector('#searchform button');
 /*
 const img = document.querySelector('#image');
 const aud = document.querySelector('#aud');

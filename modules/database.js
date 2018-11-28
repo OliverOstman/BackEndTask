@@ -26,6 +26,20 @@ const select = (connection, callback, res) => {
   );
 };
 
+const search = (data, connection, callback, res) => {
+  // simple query
+  connection.query(
+      'SELECT * FROM bc_media WHERE category = ?;',
+      data,
+      (err, results, fields) => {
+        // console.log(results); // results contains rows returned by server
+        // console.log(fields); // fields contains extra meta data about results, if available
+        console.log(err);
+        callback(results, res);
+      },
+  );
+};
+
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
@@ -36,20 +50,6 @@ const insert = (data, connection, callback) => {
         // console.log(fields); // fields contains extra meta data about results, if available
         console.log(err);
         callback();
-      },
-  );
-};
-
-const search = (data, connection, callback) => {
-  // simple query
-  connection.query(
-      'SELECT * FROM bc_media WHERE category = ?;',
-      data,
-      (err, results, fields) => {
-        // console.log(results); // results contains rows returned by server
-        // console.log(fields); // fields contains extra meta data about results, if available
-        console.log(err);
-        callback(results);
       },
   );
 };

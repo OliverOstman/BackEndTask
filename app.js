@@ -114,23 +114,20 @@ app.delete('/images/:mID', (req, res) => {
   res.send('{"status": "delete OK"}');
 });
 
-app.search('/upload', (req, res) => {
-  const searchData = [
-      req.body.category,
-      req.body.title,
-  ];
-  db.search(searchData, connection, res);
+app.search('/images', (req, res) => {
+  db.search(connection, cb, res);
+  console.log(connection);
+  console.log(cb);
+  console.log(res);
 });
 
 //app.listen(8000);
 //app.listen(3000);
-/*
 http.createServer((req, res) => {
   const redir = 'https://' + req.headers.host;
   // + '/node' + req.url;
   console.log(redir);
   res.writeHead(301, { 'Location': redir });
   res.end();
-}).listen(8000); */
+}).listen(8000);
 https.createServer(options, app).listen(3000);
-https.createServer(options, app).listen(8000);
